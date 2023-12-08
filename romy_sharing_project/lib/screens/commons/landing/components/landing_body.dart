@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:romy_sharing_project/components/constants.dart';
 import 'package:romy_sharing_project/components/shared_preferences.dart';
 
 class LandingBody extends StatefulWidget {
@@ -20,7 +21,9 @@ class _LandingBodyState extends State<LandingBody> {
   _loadInfo(){
     Sessions.getUserId().then((value){
       if(value.isEmpty){
-        // Navigator.pushNamedAndRemoveUntil(context, newRouteName, (route) => false);
+        Navigator.pushNamedAndRemoveUntil(context, kPathLogin, ModalRoute.withName(kPathLogin));
+      }else{
+        Navigator.pushNamedAndRemoveUntil(context, kPathDashBoard, ModalRoute.withName(kPathDashBoard));
       }
     });
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:romy_sharing_project/components/route_generator.dart';
 import 'package:romy_sharing_project/screens/commons/dashboard/dashboard_screen.dart';
 import 'package:romy_sharing_project/screens/commons/login/login_screen.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DashboardScreen(),
+      onGenerateRoute: RouteGenerator.routeGenerator,
     );
   }
 }

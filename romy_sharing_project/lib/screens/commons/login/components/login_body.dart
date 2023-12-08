@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:romy_sharing_project/components/constants.dart';
 import 'package:romy_sharing_project/components/shared_preferences.dart';
 import 'package:romy_sharing_project/components/widget/card_widget.dart';
 import 'package:romy_sharing_project/models/login/login.dart';
@@ -145,18 +146,16 @@ class _LoginBodyState extends State<LoginBody> {
             phone: value.phone,
             imageUrl: value.imageUrl);
 
-          Sessions.getUserId().then((value){
-            Sessions.getUserName().then((value2){
-              print(value);
-              print(value2);
-            });
-          });
+        Navigator.popAndPushNamed(context, kPathDashBoard);
+
+        print("test");
 
 
       }else{
         _wrongPassword = true;
         _formKey.currentState!.validate();
         message = value.message;
+        print("test2");
       }
     });
 

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:romy_sharing_project/screens/commons/dashboard/dashboard_screen.dart';
+import 'package:romy_sharing_project/screens/commons/landing/landing_screen.dart';
+import 'package:romy_sharing_project/screens/commons/login/login_screen.dart';
+import 'package:romy_sharing_project/screens/sales_order/sales_order_list/sales_order_list_screen.dart';
 
 import 'constants.dart';
 
@@ -6,7 +10,13 @@ class RouteGenerator{
   static Route<dynamic> routeGenerator(RouteSettings settings){
     switch (settings.name){
       case kPathLanding:
-        return  _errorRoute();
+        return MaterialPageRoute(builder: (_) => const LandingScreen());
+      case kPathLogin:
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case kPathDashBoard:
+        return MaterialPageRoute(builder: (_) => const DashboardScreen());
+      case kPathSalesOrderList:
+        return MaterialPageRoute(builder: (_) => const SalesOrderListScreen());
       default:
         return _errorRoute();
     }

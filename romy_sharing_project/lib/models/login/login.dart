@@ -50,6 +50,9 @@ class Login{
       },
       body: params,
     );
+
+    print(uri);
+    print(params);
     var jsonObj = json.decode(apiResult.body);
     var objLogin = (jsonObj as Map<String, dynamic>)['result'];
 
