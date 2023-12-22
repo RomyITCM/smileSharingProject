@@ -52,3 +52,18 @@ Uri getUrl({required String pathUrl, Map<String, dynamic>? params}){
   Uri uri = Uri.https(kUrl, newPath, params);
   return uri;
 }
+
+Color getColorLabel(String label) {
+  Color color = kColorYellow;
+  if (label == kApproved || label == kActive) {
+    color = kColorPrimary;
+  } else if (label == kReadToDelivery) {
+    color = kColorGreenAccent;
+  } else if (label == kDelivered || label == '') {
+    color = kColorGreen;
+  } else if (label == kRejected || label == kInactive) {
+    color = kColorRed;
+  }
+
+  return color;
+}
