@@ -10,6 +10,8 @@ const kPathLogin = '/login';
 const kPathDashBoard = '/dashboard';
 const kPathSalesOrderList = '/sales_order/list';
 const kPathSalesOrderDetail = '/sales_order/detail';
+const kPathCustomer = '/customer';
+const kPathTransaction = '/transaction';
 
 //PRIMARY COLOR//
 const kColorPrimary = Color(0xFF223e91);

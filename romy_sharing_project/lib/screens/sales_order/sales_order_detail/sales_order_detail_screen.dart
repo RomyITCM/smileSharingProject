@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../components/shared.dart';
-import 'components/SalesOrderDetailBody.dart';
+import 'components/sales_order_detail_body.dart';
 
 class SalesOrderDetailScreen extends StatefulWidget {
   const SalesOrderDetailScreen({super.key});

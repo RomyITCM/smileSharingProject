@@ -67,3 +67,28 @@ Color getColorLabel(String label) {
 
   return color;
 }
+
+BoxConstraints prefixSuffixIconConstraint() {
+  return const BoxConstraints(minHeight: 20, minWidth: 20);
+}
+
+class SetDynamicRoute {
+  static String route = '';
+  static String mainRoute = '';
+
+  static void setRoute(String newValue) {
+    route = newValue;
+  }
+
+  static void setMainRoute(String newValue) {
+    mainRoute = newValue;
+  }
+
+  static String getRoute() {
+    return route;
+  }
+
+  static String getMainRoute() {
+    return mainRoute;
+  }
+}
